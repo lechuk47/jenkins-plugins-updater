@@ -19,3 +19,8 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          title: Jenkins plugins auto-update
+          body: Jenkins plugins update by BTD
+          commit_message: Jenkins-plugins auto-update
+          delete_branch: true
