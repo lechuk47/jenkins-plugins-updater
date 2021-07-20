@@ -22,5 +22,5 @@ jobs:
         with:
           title: Jenkins plugins auto-update
           body: Jenkins plugins update by BTD
-          commit_message: Jenkins-plugins auto-update
-          delete_branch: true
+          commit-message: Jenkins-plugins auto-update
+          delete-branch: true
