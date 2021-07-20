@@ -20,4 +20,4 @@ runs:
     - -o
     - txt
     - ">"
-    - ${{ inputs.file }} 
+    - output.file
