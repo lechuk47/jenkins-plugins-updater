@@ -12,5 +12,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Update Jenkins plugins Lint Code Base
+      - name: Update Jenkins plugins
         uses: ./.github/actions/jenkins-plugins-updater
+        with:
+          file: test/plugins.txt

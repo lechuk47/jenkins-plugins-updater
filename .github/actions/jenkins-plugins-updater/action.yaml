@@ -1,10 +1,10 @@
 name: Update Jenkins plugins
 description: 'Updates Jenkins plugins files'
-#inputs:
-#  who-to-greet:  # id of input
-#    description: 'Who to greet'
-#    required: true
-#    default: 'World'
+inputs:
+  file:
+    description: "Plugins file to update"
+    required: true
+
 #outputs:
 #  time: # id of output
 #    description: 'The time we greeted you'
@@ -12,4 +12,4 @@ runs:
   using: 'docker'
   image: 'jenkins/jenkins:latest'
   args:
-    - jenkins-plugin-cli
+    - jenkins-plugin-cli -f ${{ INPUT_FILE }}  --available-updates
