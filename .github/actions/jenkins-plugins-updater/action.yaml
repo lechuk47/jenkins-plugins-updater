@@ -19,5 +19,5 @@ runs:
     - --available-updates
     - -o
     - txt
-    - >
+    - ">"
     - ${{ inputs.file }} 
