@@ -16,3 +16,6 @@ jobs:
         uses: ./.github/actions/jenkins-plugins-updater
         with:
           file: test/plugins.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
