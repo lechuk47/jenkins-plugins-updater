@@ -11,7 +11,7 @@ inputs:
 #    description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'jenkins/jenkins:latest'
+  image: 'Dockerfile'
   args:
     - jenkins-plugin-cli
     - -f
@@ -20,4 +20,4 @@ runs:
     - -o
     - txt
     - ">"
-    - output.file
+    - ${{ inputs.file }}
