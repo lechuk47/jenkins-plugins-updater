@@ -13,4 +13,11 @@ runs:
   using: 'docker'
   image: 'jenkins/jenkins:latest'
   args:
-    - "jenkins-plugin-cli -f ${{ inputs.file }}  --available-updates -o txt ${{ inputs.file }}"
+    - jenkins-plugin-cli
+    - -f
+    - ${{ inputs.file }}
+    - --available-updates
+    - -o
+    - txt
+    - >
+    - ${{ inputs.file }} 
