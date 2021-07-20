@@ -4,6 +4,7 @@ inputs:
   file:
     description: "Plugins file to update"
     required: true
+    default: "DEFAUT_VALUE"
 
 #outputs:
 #  time: # id of output
