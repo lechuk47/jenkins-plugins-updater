@@ -1,0 +1,27 @@
+name: Update Jenkins plugins
+on:
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  update-jenkins-plugins:
+    name: Update Jenkins Plugins
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Update Jenkins plugins Lint Code Base
+        uses: ./.github/actions/jenkins-plugins-updater
