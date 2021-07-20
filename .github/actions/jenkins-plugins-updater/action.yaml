@@ -14,3 +14,8 @@ runs:
   image: 'jenkins/jenkins:latest'
   args:
     - jenkins-plugin-cli
+    - -f
+    - ${{ inputs.file }}
+    - --available-updates
+    - -o
+    - txt
