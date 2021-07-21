@@ -1,0 +1,1 @@
+docker run --rm -v $(pwd):/app jenkins/jenkins:latest jenkins-plugin-cli -f /app/plugins.txt --available-updates -o txt > updated
