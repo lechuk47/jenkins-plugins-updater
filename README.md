@@ -1,1 +1,6 @@
-docker run --rm -v $(pwd):/app jenkins/jenkins:latest jenkins-plugin-cli -f /app/plugins.txt --available-updates -o txt > updated
+## Github Action to update jenkins plugins list
+Attempt to generate an action to generate a updated list of plugins from a plugins file list. The action will generate a PR with the updated list of plugins. 
+
+```In a Command
+$(pwd):/app jenkins/jenkins:latest jenkins-plugin-cli -f /app/plugins.txt --available-updates -o txt > updated
+```
